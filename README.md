@@ -1,0 +1,2 @@
+# SchoolManagementSystem
+JavaFX App
