@@ -1,6 +1,7 @@
 package loginapp;
 
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -37,5 +38,17 @@ public class LoginController implements Initializable {
         }
 
         combobox.setItems(FXCollections.observableArrayList(Option.values()));
+    }
+
+    public void login(ActionEvent event) {
+
+    }
+
+    public void studentLogin() {
+
+    }
+
+    public void adminLogin() {
+
     }
 }
