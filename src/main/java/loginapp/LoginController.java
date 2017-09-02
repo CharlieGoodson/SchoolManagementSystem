@@ -30,12 +30,12 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        if (this.model.isDatabaseConnected()) {
-            this.dbstatus.setText("Connected");
+        if (model.isDatabaseConnected()) {
+            dbstatus.setText("Connected");
         } else {
-            this.dbstatus.setText("Not Connected");
+            dbstatus.setText("Not Connected");
         }
 
-        this.combobox.setItems(FXCollections.observableArrayList(Option.values()));
+        combobox.setItems(FXCollections.observableArrayList(Option.values()));
     }
 }

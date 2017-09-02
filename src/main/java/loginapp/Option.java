@@ -9,7 +9,7 @@ public enum  Option {
         return name();
     }
 
-    public static Option fomvalue(String v) {
+    public static Option fromValue(String v) {
         return valueOf(v);
     }
 }

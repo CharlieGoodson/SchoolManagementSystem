@@ -13,17 +13,17 @@ public class LoginModel {
 
     public LoginModel() {
         try {
-            this.connection = DbConnection.getConnection();
+            connection = DbConnection.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(this.connection == null) {
+        if(connection == null) {
             System.exit(1);
         }
     }
 
     public boolean isDatabaseConnected() {
-        return this.connection != null;
+        return connection != null;
     }
 
     public boolean isLogin(String user, String pass, String opt) throws Exception {
@@ -34,7 +34,7 @@ public class LoginModel {
         String sql = "SELECT * FROM login where username = ? and password = ? and division = ?";
 
         try {
-            ps = this.connection.prepareStatement(sql);
+            ps = connection.prepareStatement(sql);
 
             ps.setString(1, user);
             ps.setString(2, pass);
