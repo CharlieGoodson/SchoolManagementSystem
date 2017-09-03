@@ -1,7 +1,5 @@
 .idea
 *.iml
 target
-*.db
-*.sqlite
 * . tmp
 * ~
