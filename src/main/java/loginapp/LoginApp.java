@@ -14,6 +14,7 @@ public class LoginApp extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("School Management System");
+        stage.setResizable(false);
         stage.show();
     }
 
