@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import students.StudentsController;
@@ -99,7 +100,7 @@ public class LoginController implements Initializable {
         try {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane)loader.load(getClass().getResource("/fxml/admin.fxml").openStream());
+            AnchorPane root = loader.load(getClass().getResource("/fxml/admin.fxml").openStream());
 
             StudentsController studentsController = (StudentsController) loader.getController();
 
