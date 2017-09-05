@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminController">
    <children>
       <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -23,13 +23,13 @@
                      <children>
                         <HBox layoutX="455.0" layoutY="40.0" prefHeight="691.0" prefWidth="906.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <TableView prefHeight="691.0" prefWidth="982.0">
+                              <TableView fx:id="studentTable" prefHeight="691.0" prefWidth="982.0">
                                 <columns>
-                                  <TableColumn prefWidth="50.0" text="ID" />
-                                  <TableColumn prefWidth="230.0" text="First Name" />
-                                    <TableColumn prefWidth="230.0" text="Last Name" />
-                                    <TableColumn prefWidth="211.0" text="Email" />
-                                    <TableColumn prefWidth="184.0" text="DOB" />
+                                  <TableColumn fx:id="idCol" prefWidth="50.0" text="ID" />
+                                  <TableColumn fx:id="firstNameCol" prefWidth="230.0" text="First Name" />
+                                    <TableColumn fx:id="lastNameCol" prefWidth="230.0" text="Last Name" />
+                                    <TableColumn fx:id="emailCol" prefWidth="211.0" text="Email" />
+                                    <TableColumn fx:id="dobCol" prefWidth="184.0" text="DOB" />
                                 </columns>
                               </TableView>
                            </children>
@@ -66,17 +66,17 @@
                                     <Insets bottom="25.0" />
                                  </VBox.margin>
                               </DatePicker>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="393.0" text="Add Entry">
+                              <Button fx:id="addEntry" mnemonicParsing="false" onAction="#addEntry" prefHeight="25.0" prefWidth="393.0" text="Add Entry">
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Button>
-                              <Button layoutX="10.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="421.0" text="Clear Form">
+                              <Button fx:id="clearForm" layoutX="10.0" layoutY="183.0" mnemonicParsing="false" onAction="#clearForm" prefHeight="25.0" prefWidth="421.0" text="Clear Form">
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Button>
-                              <Button layoutX="10.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="437.0" text="Load Data">
+                              <Button fx:id="loadData" layoutX="10.0" layoutY="183.0" mnemonicParsing="false" onAction="#loadStudentData" prefHeight="25.0" prefWidth="437.0" text="Load Data">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>

@@ -1,5 +1,6 @@
 package loginapp;
 
+import admin.AdminController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -102,7 +103,7 @@ public class LoginController implements Initializable {
             FXMLLoader loader = new FXMLLoader();
             AnchorPane root = loader.load(getClass().getResource("/fxml/admin.fxml").openStream());
 
-            StudentsController studentsController = (StudentsController) loader.getController();
+//            AdminController adminController = (AdminController) loader.getController();
 
             Scene scene = new Scene(root);
             stage.setScene(scene);
